@@ -64,7 +64,6 @@ def chooseWinner(player, computer):
             print("YOU LOSE!\n")
 
 
-# GAME LOOP FIXED
 playAgain = 'y'
 
 while playAgain.lower() == 'y':
