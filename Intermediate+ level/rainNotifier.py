@@ -2,12 +2,10 @@ import time
 from datetime import datetime
 
 # --- Configuration ---
-# NOTE: In a real application, you would replace this with a valid API 
-Key from a service like OpenWeatherMap.
-API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"
+# NOTE: In a real application, you would replace this with a valid API Key from a service like OpenWeatherMap.
+API_KEY = "mock"
 CITY = "London"  # Change this to your desired city
-RAIN_THRESHOLD = 5  # Rain level (in mm/hour or similar metric) that 
-triggers the alert
+RAIN_THRESHOLD = 5  # Rain level (in mm/hour or similar metric) that triggers the alert
 
 def fetch_weather(city: str, api_key: str) -> dict:
     """
@@ -24,14 +22,11 @@ to a Weather API. ***
         import random
         if random.choice([True, False]):
             temp = round(random.uniform(5.0, 15.0), 1)
-            rainfall = round(random.uniform(0.0, 10.0), 2) # Simulate 
-rain detection
-            condition = "Rainy" if rainfall >= RAIN_THRESHOLD else 
-"Cloudy"
+            rainfall = round(random.uniform(0.0, 10.0), 2) # Simulate rain detection
+            condition = "Rainy" if rainfall >= RAIN_THRESHOLD else "Cloudy"
         else:
             temp = round(random.uniform(15.0, 25.0), 1)
-            rainfall = round(random.uniform(0.1, 4.9), 2) # Simulate dry 
-conditions
+            rainfall = round(random.uniform(0.1, 4.9), 2) # Simulate dry conditions
             condition = "Clear"
     else:
         # Default mock data for other cities
@@ -56,8 +51,7 @@ def notify_rain(data: dict):
     print(f"🚨 RAIN ALERT! NOTIFICATION SENT at {timestamp} 🚨")
     print(f"Location: {data['city']}")
     print(f"Condition: {data['condition']}")
-    print(f"Current Rainfall: {data['rainfall']} mm/hr (Threshold is 
-{RAIN_THRESHOLD} mm/hr)")
+    print(f"Current Rainfall: {data['rainfall']} mm/hr (Threshold is {RAIN_THRESHOLD} mm/hr)")
     print("--------------------------------------------------\n")
 
 
@@ -67,8 +61,7 @@ def run_notifier():
 user.
     """
     if API_KEY == "YOUR_OPENWEATHERMAP_API_KEY":
-        print("ERROR: Please configure your API_KEY in the script before 
-running.")
+        print("ERROR: Please configure your API_KEY in the script before running.")
         return
 
     print(f"--- Rain Notifier Initialized ---")
@@ -80,8 +73,7 @@ running.")
             # 1. Fetch the weather data
             weather_data = fetch_weather(CITY, API_KEY)
             
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] Weather 
-Update:")
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Weather Update:")
             print(f"  Temperature: {weather_data['temperature']}°C")
             print(f"  Rainfall Rate: {weather_data['rainfall']} mm/hr")
             print(f"  Current Condition: {weather_data['condition']}")
@@ -90,8 +82,7 @@ Update:")
             if weather_data['rainfall'] >= RAIN_THRESHOLD:
                 notify_rain(weather_data)
             
-            # 3. Wait for a specified time before checking again (Polling 
-interval)
+            # 3. Wait for a specified time before checking again (Polling interval)
             sleep_time = 60  # Check every 60 seconds
             print(f"\nWaiting for {sleep_time} seconds...\n")
             time.sleep(sleep_time)
@@ -106,4 +97,4 @@ interval)
 
 
 if __name__ == "__main__":
-    runNotifier()
+    run_notifier()
