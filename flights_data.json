@@ -1,0 +1,72 @@
+[
+  {
+    "city": "Paris",
+    "iata": "PAR",
+    "target_price": 50,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Berlin",
+    "iata": "BER",
+    "target_price": 60,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Tokyo",
+    "iata": "TYO",
+    "target_price": 450,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Sydney",
+    "iata": "SYD",
+    "target_price": 550,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Istanbul",
+    "iata": "IST",
+    "target_price": 120,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Kuala Lumpur",
+    "iata": "KUL",
+    "target_price": 300,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "New York",
+    "iata": "NYC",
+    "target_price": 300,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "San Francisco",
+    "iata": "SFO",
+    "target_price": 350,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Cape Town",
+    "iata": "CPT",
+    "target_price": 400,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  },
+  {
+    "city": "Bali",
+    "iata": "DPS",
+    "target_price": 350,
+    "lowest_price": Infinity,
+    "last_alerted": null
+  }
+]
